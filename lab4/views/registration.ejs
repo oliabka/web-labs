@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shizuru">
+	<style>
+		h1{ font-family: 'Shizuru',cursive;}
+	</style>
+	<meta charset ="UTF-8">
+	<title>Oliabka's journal | Registration</title>
+	<link rel="stylesheet" href="login/login.css">
+</head>
+
+<body>
+	<div class="container">
+		<form  action="/register" method="POST" class="form form-hidden"  id="createAccount"> 
+			<h1 class="form-title"><%= __('registration_header') %></h1>
+			<div class="form-message form-message-error"></div>
+			<div class="form-input-group">
+				<input type="text" name="registrationUsername" class="form-input" id="signupUsername" autofocus placeholder="<%= __('username') %>" required>
+			</div>
+			<div class="form-input-group">
+				<input type="email" name="registrationEmail" class="form-input" id="signupEmail" autofocus placeholder="<%= __('email') %>"  required>
+			</div>
+			<div class="form-input-group">
+				<input type="password" name="registrationPassword" class="form-input" id="signupPassword" autofocus placeholder="<%= __('password') %>"  required>
+			</div>
+			<button class="form-button" type="submit"><%= __('login_button') %></button>
+			<p class="form-text">
+				<a class="form-link"  href="/log" id="linkLogin"><%= __('login_link') %></a>
+			</p>
+		</form>
+	</div>
+	<p><a href="#" id="en" class="form-link">en</a> | <a href="#" id="ru" class="form-link">ru</a></p>
+	<script src = "locale.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shizuru">
+	<style>
+		h1{ font-family: 'Shizuru',cursive;}
+	</style>
+	<meta charset ="UTF-8">
+	<title>Oliabka's journal | Now</title>
+	<link rel="stylesheet" href="index.css">
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+	rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+	crossorigin="anonymous"> -->
+
+</head>
+  
+<body class ="now-body">
+	<nav>
+		<ul class = "main_menu">
+			<li>  <a class ="main" href = "/home"><%= __('home_link') %></a> </li>
+			<li>  <a class ="main" href = "/socials"><%= __('socials_link') %></a> </li>
+			<li> <div class = "dropdown"> <a class = "main" href = "/now"><%= __('now_link') %></a> 
+				<ul class ="dropdown-content">
+					<li> <a href="/now#photos-link"><%= __('photos') %></a><li>
+					<!-- <li> <a href="/now#tik-toks-link"><%= __('tik-toks') %></a><li> -->
+					<li> <a href="/now#videos-link"><%= __('videos') %></a><li>
+				</ul>
+				</div>
+			</li>
+			<li>  <a class ="main" href = "/message"><%= __('message_link') %></a> </li>
+			<li><%= __('user') %>: <%=user%></li>
+			<li> 
+				<form action="/logout?_method=DELETE" method="POST">
+				<button class="logout-button" type="submit"><%= __('logout_link') %></button>
+				  </form>
+			</li>
+		</ul>  
+	</nav>
+	<h1 class = "now-title" id =<%=user%>><%= __('now_header') %></h1>
+	<h2 class = "now-subtitle"><%= __('now_sub_header') %></h2>
+	<h2 id="photos-link" class="favotites"> ♥♥♥ <%= __('photos') %> ♥♥♥ </h2>
+	<div class = "fav-photos">
+		<% images.forEach(image => { %>
+			<div class = "card-body">
+				<img src=<%=image.path%>>
+				<div class="likes-info">
+					<button class="like-button"  onclick="actOnPost(event);">
+						<% if(image.users.includes(user)){ %>
+							<img src="icons/hearts-like.png" class="like-icon" id="<%=image.id%>">
+						  <% } else{ %>  
+							<img src="icons/hearts-unlike.png" class="like-icon" id="<%=image.id%>">
+						<% } %>
+					</button>
+					<div class="likes-count" id="likes-count-<%=image.id%>"><%=image.likes%></div>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+	
+	
+	<!-- <h2 id="tik-toks-link" class="favotites"> ♥♥♥ <%= __('tik-toks') %> ♥♥♥ </h2>
+	<div class = "fav-tic-toks"> 
+		<% tikToks.forEach(tiktok => { %>
+			<div class = "card-body">
+				<video controls> <source src=<%=tiktok.path%> type="video/mp4"></video>
+				<div class="likes-info">
+					<button class="like-button"  onclick="actOnPost(event);">
+						<% if(tiktok.users.includes(user)){ %>
+							<img src="icons/hearts-like.png" class="like-icon" id="<%=tiktok.id%>">
+						  <% } else{ %>  
+							<img src="icons/hearts-unlike.png" class="like-icon" id="<%=tiktok.id%>">
+						<% } %>
+					</button>
+					<div class="likes-count" id="likes-count-<%=tiktok.id%>"><%=tiktok.likes%></div>
+				</div>
+			</div>
+		<% }) %>
+
+	</div> -->
+
+	<h2 id="videos-link" class="favotites"> ♥♥♥ <%= __('videos') %> ♥♥♥ </h2>
+	<div class = "fav-videos"> 
+		<% youTubes.forEach(youtube => { %>
+			<div class = "card-body">
+				<iframe width="560" height="315" src=<%=youtube.path%> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="likes-info">
+					<button class="like-button"  onclick="actOnPost(event);">
+						<% if(youtube.users.includes(user)){ %>
+							<img src="icons/hearts-like.png" class="like-icon" id="<%=youtube.id%>">
+						  <% } else{ %>  
+							<img src="icons/hearts-unlike.png" class="like-icon" id="<%=youtube.id%>">
+						<% } %>
+					</button>
+					<div class="likes-count" id="likes-count-<%=youtube.id%>"><%=youtube.likes%></div>
+				</div>
+			</div>
+		<% }) %>
+	</div>
+
+	<div class = "footer"><p><a href="#" id="en">en</a> | <a href="#" id="ru">ru</a></p></div>
+	<div class = "bottom-gif"><img src="images/fluffy-cow.gif"></div>
+	<script src = "locale.js"></script>
+
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src = "likes.js"></script>
+	<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+	<script src = "pusher.js"></script>
+
+</body>
+
+</html>

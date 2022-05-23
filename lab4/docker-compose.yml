@@ -1,0 +1,29 @@
+version: '3'
+services:
+  server:
+    build: .
+    env_file:
+      - .env
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/media
+      - LOGIN_URL=http://login:4000/register
+    ports:
+      - 3000:3000
+    links:
+      - "db:mongo"
+  login:
+    build: ..\login_microservice
+    env_file:
+      - .env
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/media
+    ports:
+      - 4000:4000
+    links:
+      - "db:mongo"
+  db:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - ..\mongo_data:/data/db

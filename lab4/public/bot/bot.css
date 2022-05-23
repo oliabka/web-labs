@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'akaya_telivigalaregular';
+    src: url('../fonts/akayatelivigala-regular-webfont.woff2') format('woff2'),
+         url('../fonts/akayatelivigala-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    font-family:'akaya_telivigalaregular';
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    --color-primary: #A06767;
+    --color-primary-lighter: #ca8080;
+    --color-secondary: #1e1e1e;
+    --color-success: rgba(101, 194, 132, 0.933);
+    --color-error: #b85285;
+    --border-radius: 10px;
+    margin:0;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background: url(../backgrounds/rainbow-tiedye.jpg);
+    background-size: 30%;
+}
+
+/* navigation setup */
+nav{
+	width: 100%;
+	background:#fff;
+	height:50px;
+	position: fixed;
+	margin: 0;
+    
+}
+
+.main_menu{
+    padding: 0;
+}
+
+.main_menu li{
+    list-style: none;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.main_menu li a{
+    color: #1e1e1e;
+	text-decoration:none;
+	font-size:20px;
+	padding:0 20px;
+	padding:15px;
+}
+
+.main_menu li a:visited{
+    color: #1e1e1e;
+}
+
+.main_menu li a:hover{
+    color: var(--color-primary);
+}
+
+.logout-button{
+	border: none;
+	background: none;
+	font-size:20px;
+	padding:0 20px;
+	padding:15px;
+}
+
+.logout-button:hover{color: #A06767;}
+/* end of navigation setup */
+
+/* form setup */
+.container{
+    width: 600px;
+    max-width: 600px;
+    margin: 1rem;
+    margin-top: 3.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 40px rgba(0,0,0,0.2);
+    border-radius: var(--border-radius);
+    background: #fff;
+}
+
+.form-hidden{
+    display: none;
+}
+
+
+.form>*:first-child{
+    margin-top: 0;
+}
+
+.form>*:last-child{
+    margin-bottom: 0;
+}
+
+.form-title{
+    font-size: 50px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-message{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* .form-message-success{
+    color: var(--color-success);
+}
+
+.form-message-error{
+    color: var(--color-error);
+} */
+
+.form-input-group{
+    margin-bottom: 1rem;
+}
+
+.form-input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.message{
+    height: 10rem;
+    resize: none;
+    overflow: auto;
+}
+
+.form-input:focus{
+    border-color: var(--color-primary);
+    background: #fff;
+}
+
+/* .form-input-error{
+    color: var(--color-error);
+    border-color: var(--color-error);
+} */
+
+/* .form-input-error-message{
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--color-error);
+} */
+
+.form-button{
+    width:100%;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    color: #fff;
+    border:none;
+    border-radius: var(--border-radius);
+    outline:none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.form-button:hover{
+    background: var(--color-primary-lighter);
+}
+
+.form-button:active{
+    transform: scale(0.98);
+}
+
+.form-text{
+    text-align: center;
+}
+
+.form-link{
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-link:hover{
+    text-decoration: underline;
+}
+/* end of form setup */
+
+
+/* menu setup */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  
+}
+  
+.dropdown-content {
+    margin:0;
+    padding:0;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 115%;
+    overflow: auto;
+    top:49px;
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+    overflow:visible;
+}
+  
+.dropdown-content li {
+    color: #1e1e1e;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;	
+    line-height:30px;
+}
+  
+.dropdown-content li :hover {color: #A06767;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.main_menu li:hover .main{color: #A06767;}

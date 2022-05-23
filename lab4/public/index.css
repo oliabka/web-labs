@@ -1,0 +1,265 @@
+@font-face {
+    font-family: 'army_beansregular';
+    src: url('fonts/armybeansregular-wyka-webfont.woff2') format('woff2'),
+         url('fonts/armybeansregular-wyka-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'redressedregular';
+    src: url('fonts/redressed-regular-webfont.woff2') format('woff2'),
+         url('fonts/redressed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'akaya_telivigalaregular';
+    src: url('fonts/akayatelivigala-regular-webfont.woff2') format('woff2'),
+         url('fonts/akayatelivigala-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* end of fonts */
+
+*{
+	font-family:'akaya_telivigalaregular';
+	color: #1e1e1e;
+	font-size: 20px;
+	margin:0;
+	padding:0;
+}
+
+body{
+	margin:0;
+	overflow: auto;
+}
+
+body.now-body{
+	background-image:url("backgrounds/flowers.jpg");
+	background-size: 30%;
+}
+
+body.socials-body{
+	background-image:url("backgrounds/cheetah.jpg");
+	background-size: 30%;
+}
+
+body.home-body{
+	background-image:url("backgrounds/pink-water.jpg");
+	background-size: 30%;
+}
+
+/* navigation setup */
+nav{
+	width: 100%;
+	background:#fff;
+	height: auto;
+	display: flex;
+	position: fixed;
+	margin: 0;
+}
+
+.main_menu{
+	padding: 0;
+	height: 50px;
+}
+
+.main_menu li{
+	list-style: none;
+	display: inline-block;
+	line-height: 50px;
+}
+
+.main_menu li a{
+	text-decoration:none;
+	font-size:20px;
+	padding:0 20px;
+	padding:15px;
+
+}
+
+.logout-button{
+	border: none;
+	background: none;
+	font-size:20px;
+	padding:0 20px;
+	padding:15px;
+}
+
+.logout-button:hover{color: #A06767;}
+/* end of navigation setup */
+
+/* contents setup */
+h1{
+	/*font-family: 'Shizuru',cursive;*/
+	font-size: 80px;
+	padding: 30px 0 0 0;	
+}
+
+h2{
+	font-size:30px;
+}
+
+div{
+	font-size:30px;
+}
+
+.intro-picture img
+{	height: 450px;
+	width:auto;
+	float:left;
+	padding: 10px;
+}
+
+h2.favotites{
+	padding: 30px 0 0 0;
+}
+
+
+.fav-photos {
+	width: 100%;
+	height: 310px;
+	overflow: auto;
+	display:flex;
+	flex-direction: row; 
+	align-content: flex-start;
+}
+
+.fav-photos img{
+	height:90%;
+	width:auto;
+}
+
+.fav-tic-toks {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	display:flex;
+	flex-direction: row;
+}
+
+.fav-tic-toks video {
+	height: 490px;
+	width:auto;
+}
+
+.fav-videos {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	display:flex;
+	flex-direction: row;
+}
+
+/* .fav-videos *{
+	min-width:560px;
+	min-height:315px;
+	
+} */
+
+.like-button{
+	background: none;
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	cursor:pointer;
+}
+.like-button:focus {
+	outline: none;
+	box-shadow: none;
+	border: 0;
+	
+}
+
+.like-icon{
+	margin-top: 1px;
+	max-width: 30px;
+	width: 30px;
+	height: 30px;
+	max-height: 30px;
+}
+
+.likes-info{
+	display: flex;
+	flex-direction: row;
+}
+
+.card-body{
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+
+}
+/* end of contents setup */
+
+/* gif footer */
+.footer{
+	width: 100%;
+	height: 70px;
+	color:red;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+}
+
+.bottom-gif{
+  position: fixed;
+  z-index:100;
+  bottom: -119px;
+  animation-duration: 30s;
+  animation-name: cow-walking;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes cow-walking{
+from{
+left:-120px;
+}
+
+to{
+left: 100%;
+}
+
+}
+/* end of gif footer */
+
+
+/* menu setup */
+.dropdown {
+  position: relative;
+  display: inline-block;
+
+}
+
+.dropdown-content {
+  margin:0;
+  padding:0;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 115%;
+  overflow: auto;
+  top:49px;
+  box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);
+  overflow:visible;
+}
+
+.dropdown-content li {
+  color: #1e1e1e;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;	
+  line-height:30px;
+}
+
+.dropdown-content li :hover {color: #A06767;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.main_menu li:hover .main{color: #A06767;}

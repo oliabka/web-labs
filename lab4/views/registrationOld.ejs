@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shizuru">
+	<style>
+		h1{ font-family: 'Shizuru',cursive;}
+	</style>
+	<meta charset ="UTF-8">
+	<title>Oliabka's journal | Registration</title>
+	<link rel="stylesheet" href="login/login.css">
+</head>
+
+<body>
+	<div class="container">
+		<form  class="form form-hidden"  id="createAccount"> 
+			<h1 class="form-title">Create account</h1>
+			<div class="form-message form-message-error"></div>
+			<div class="form-input-group">
+				<input type="text" name="registrationUsername" class="form-input" id="signupUsername" autofocus placeholder="Username" required>
+				<div class="form-input-error-message"></div>
+			</div>
+			<div class="form-input-group">
+				<input type="email" name="registrationEmail" class="form-input" id="signupEmail" autofocus placeholder="Email address"  required>
+				<div class="form-input-error-message"></div>
+			</div>
+			<div class="form-input-group">
+				<input type="password" name="registrationPassword" class="form-input" id="signupPassword" autofocus placeholder="Password"  required>
+				<div class="form-input-error-message"></div>
+			</div>
+			<div class="form-input-group">
+				<input type="password" name="registrationSecondPassword" class="form-input" id="signupConfirmPassword"autofocus placeholder="Confirm password"  required>
+				<div class="form-input-error-message"></div>
+			</div>
+			<button class="form-button" type="submit">Let me in!!!</button>
+			<p class="form-text">
+				<a class="form-link"  href="/log" id="linkLogin">Can I use the old one...?</a>
+			</p>
+		</form>
+	</div>
+	<script src = "login/register.js"></script>
+</body>
+</html>

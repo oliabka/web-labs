@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Shizuru">
+	<style>
+		h1{ font-family: 'Shizuru',cursive;}
+	</style>
+	<meta charset ="UTF-8">
+	<title>Oliabka's journal | Login</title>
+	<link rel="stylesheet" href="login/login.css">
+</head>
+
+<body>
+	<div class="container">
+		<form action="/log" method="POST" class="form" id="login"> 
+			<h1 class="form-title"><%= __('login_header') %></h1>
+			<div class="form-message form-message-error">
+				<% if (messages.error=='incorrect_email_msg') { %>
+					<%= __('incorrect_email_msg') %>
+				  <% } else if (messages.error == 'incorrect_password_msg') {%> 
+					<%= __('incorrect_password_msg') %>
+					<% } %> 
+				</div>
+			<!-- <div class="form-message form-message-error"></div> -->
+			<div class="form-input-group">
+				<input type="email" name="email" class="form-input" autofocus placeholder="<%= __('email') %>" required>
+				<div class="form-input-error-message"></div>
+			</div>
+			<div class="form-input-group">
+				<input type="password" name="password" class="form-input" autofocus placeholder="<%= __('password') %>" required>
+			</div>
+			<button class="form-button" type="submit"><%= __('login_button') %></button>
+			<p class="form-text">
+				<a href="/message" class="form-link"><%= __('login_message_link') %></a>
+			</p>
+			<p class="form-text">
+				<a class="form-link" href="/register" id="linkCreateAccount"><%= __('registration_link') %></a>
+			</p>
+		</form>
+	</div>
+	<p><a href="#" id="en" class="form-link">en</a> | <a href="#" id="ru" class="form-link">ru</a></p>
+	<script src = "locale.js"></script>
+</body>
+</html>
