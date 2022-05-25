@@ -34,47 +34,43 @@ body{
 nav{
 	width: 100%;
 	background:#fff;
-	height:50px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
 	position: fixed;
+	flex-wrap: wrap;
+	background-size: cover;
 	margin: 0;
-    
 }
 
 .main_menu{
-    padding: 0;
+	padding: 0;
+	/* height: 50px; */
 }
 
-.main_menu li{
-    list-style: none;
-    display: inline-block;
-    line-height: 50px;
-}
-
-.main_menu li a{
-    color: #1e1e1e;
-	text-decoration:none;
+.main_menu div{
 	font-size:20px;
 	padding:0 20px;
 	padding:15px;
 }
 
-.main_menu li a:visited{
+.main_menu div a{
     color: #1e1e1e;
-}
-
-.main_menu li a:hover{
-    color: var(--color-primary);
+	text-decoration:none;
 }
 
 .logout-button{
 	border: none;
 	background: none;
 	font-size:20px;
-	padding:0 20px;
-	padding:15px;
+	/* padding:0 20px; */
+	/* padding:15px; */
 }
 
-.logout-button:hover{color: #A06767;}
+.logout-button:hover{color: #A06767;
+	cursor: pointer;
+}
+
 /* end of navigation setup */
 
 /* form setup */
@@ -225,6 +221,6 @@ nav{
   
 .dropdown-content li :hover {color: #A06767;}
 
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown :hover .dropdown-content {display: block;}
 
-.main_menu li:hover .main{color: #A06767;}
+.main_menu :hover .main{color: #A06767;}

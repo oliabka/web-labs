@@ -7,40 +7,39 @@
 	</style>
 	<meta charset ="UTF-8">
 	<title>Oliabka's journal | Home</title>
-	<link rel="stylesheet" href="index.css"
+	<link rel="stylesheet" href="index.css">
 	
 </head>
   
 <body class = "home-body">
-	<nav>
-	<ul class = "main_menu">
-		<li>  <a class ="main" href = "/home"><%= __('home_link') %></a> </li>
-		<li>  <a class ="main" href = "/socials"><%= __('socials_link') %></a> </li>
-		<li> <div class = "dropdown"> <a class = "main" href = "/now"><%= __('now_link') %></a> 
+	<nav class = "main_menu">
+		<div><a class ="main" href = "/home"><%= __('home_link') %></a></div>
+		<div><a class ="main" href = "/socials"><%= __('socials_link') %></a></div>
+		<div class = "dropdown"> <a class = "main" href = "/now"><%= __('now_link') %></a> 
 			<ul class ="dropdown-content">
 				<li> <a href="/now#photos-link"><%= __('photos') %></a><li>
 				<!-- <li> <a href="/now#tik-toks-link"><%= __('tik-toks') %></a><li> -->
 				<li> <a href="/now#videos-link"><%= __('videos') %></a><li>
 			</ul>
 			</div>
-		</li>
-		<li>  <a class ="main" href = "/message"><%= __('message_link') %></a> </li>
-		<li><%= __('user') %>: <%=user%></li>
-		<li> 
+		<div><a class ="main" href = "/message"><%= __('message_link') %></a></div>
+		<div><%= __('user') %>: <%=user%></div>
+		<div> 
 			<form action="/logout?_method=DELETE" method="POST">
 			<button class="logout-button" type="submit"><%= __('logout_link') %></button>
 		  	</form>
-		</li>
-	</ul>  
+		</div>
 	</nav>
-	<h1 class = "welcome"><%= __('home_header') %></h1>
-	<div class="intro-picture"><img src="images/me-cute-1.jpg"> </div>
-	<h6 style = "font-size: 1.5em" "font-weight: bolder"> <p> <%= __('home_text_1') %> 
-	<br/><br/><%= __('home_text_2') %></p></h6>
-	
-	<div class = "footer"> <p><a href="#" id="en">en</a> | <a href="#" id="ru">ru</a></p> </div>
-	<script src = "locale.js"></script>
-	<div class = "bottom-gif"><img src="images/fluffy-cow.gif"></div>
+	<div>
+		<h1 class = "welcome"><%= __('home_header') %></h1>
+		<div class="intro-picture"><img src="images/me-cute-1.jpg"> </div>
+		<h6 style = "font-size: 1.5em" "font-weight: bolder"> <p> <%= __('home_text_1') %> 
+		<br/><br/><%= __('home_text_2') %></p></h6>
+		
+		<div class = "footer"> <p><a href="#" id="en">en</a> | <a href="#" id="ru">ru</a></p> </div>
+		<script src = "locale.js"></script>
+		<div class = "bottom-gif"><img src="images/fluffy-cow.gif"></div>
+	</div>
 </body>
 
 </html>
