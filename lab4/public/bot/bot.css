@@ -37,7 +37,8 @@ nav{
 	height: auto;
 	display: flex;
 	flex-direction: row;
-	position: fixed;
+    position: sticky;
+	top: 0px;
 	flex-wrap: wrap;
 	background-size: cover;
 	margin: 0;

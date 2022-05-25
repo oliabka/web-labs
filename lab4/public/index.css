@@ -61,7 +61,8 @@ nav{
 	height: auto;
 	display: flex;
 	flex-direction: row;
-	position: fixed;
+	position: sticky;
+	top: 0px;
 	flex-wrap: wrap;
 	background-size: cover;
 	margin: 0;
@@ -99,7 +100,7 @@ nav{
 h1{
 	/*font-family: 'Shizuru',cursive;*/
 	font-size: 80px;
-	padding: 50px 0 0 0;
+	/* padding: 50px 0 0 0; */
 }
 
 h2{
