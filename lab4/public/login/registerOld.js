@@ -39,12 +39,14 @@ document.addEventListener("DOMContentLoaded",() =>{
             }
         })
 
-        console.log(wrongInput);
+        //console.log(wrongInput);
+
         // if (wrongInput>0)
         // {
         //     setFormMessage(createAccountForm, "error", "All fields must be filled correctly");
         // }else{
             // setFormMessage(createAccountForm, "success", "Registration complete");
+        if (wrongInput==0)
             try {
                 const response = await fetch(url, {
                   method: "POST",

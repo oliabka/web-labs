@@ -17,12 +17,15 @@
 			<div class="form-message form-message-error"></div>
 			<div class="form-input-group">
 				<input type="text" name="registrationUsername" class="form-input" id="signupUsername" autofocus placeholder="<%= __('username') %>" required>
+				<div class="form-input-error-message"></div>
 			</div>
 			<div class="form-input-group">
 				<input type="email" name="registrationEmail" class="form-input" id="signupEmail" autofocus placeholder="<%= __('email') %>"  required>
+				<div class="form-input-error-message"></div>
 			</div>
 			<div class="form-input-group">
 				<input type="password" name="registrationPassword" class="form-input" id="signupPassword" autofocus placeholder="<%= __('password') %>"  required>
+				<div class="form-input-error-message"></div>
 			</div>
 			<button class="form-button" type="submit"><%= __('login_button') %></button>
 			<p class="form-text">
@@ -31,6 +34,7 @@
 		</form>
 	</div>
 	<p><a href="#" id="en" class="form-link">en</a> | <a href="#" id="ru" class="form-link">ru</a></p>
+	<script src = "login/register.js"></script>
 	<script src = "locale.js"></script>
 </body>
 </html>
