@@ -7,6 +7,7 @@ services:
     environment:
       - MONGO_URL=mongodb://mongo:27017/media
       - LOGIN_URL=http://login:4000/register
+      - SERVER_REGISTRATION_URL=http://server:3000/register
     ports:
       - 3000:3000
     links:
