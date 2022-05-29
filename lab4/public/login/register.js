@@ -11,6 +11,17 @@ function setInputError(inputElement, message){
     inputElement.parentElement.querySelector(".form-input-error-message").textContent = message;
 }
 
+function showInputError(inputElement)
+{
+    inputElement.parentElement.querySelector(".form-input-error-message").style.display='block';
+}
+
+function hideInputError(inputElement)
+{
+    inputElement.parentElement.querySelector(".form-input-error-message").style.display='none';
+}
+
+
 function clearInputError(inputElement)
 {
     inputElement.classList.remove("form-input-error");
@@ -21,19 +32,19 @@ document.addEventListener("DOMContentLoaded",() =>{
     document.querySelectorAll(".form-input").forEach(inputElement =>{
         inputElement.addEventListener("blur", e=>{ 
             if (e.target.id =="signupUsername"  &&  !e.target.value.match(/^[A-Za-z0-9]{2,30}$/u)){
-                setInputError(inputElement, "Username must contain only letters and numbers and be at lest two characters long");
+                showInputError(inputElement);
             }
             if (e.target.id =="signupEmail"  && !e.target.value.match(/^[A-Za-z0-9._%+-]{1,64}@[A-Za-z0-9.-]{1,255}$/u)){
-                setInputError(inputElement, "Invalid email address");
+                showInputError(inputElement);
             }
             if (e.target.id =="signupPassword"  && 
             !e.target.value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)){
-                setInputError(inputElement,  "Password must include minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character (@$!%*?&)");
+                showInputError(inputElement);
             }
         });
 
         inputElement.addEventListener("input", e => {
-            clearInputError(inputElement);
+            hideInputError(inputElement);
         });
     });
 });

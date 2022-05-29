@@ -29,5 +29,8 @@
 	"login_header": "Вход",
 	"registration_header": "Новый аккаунт",
 	"incorrect_email_msg": "Нет пользователя с таким email",
-	"incorrect_password_msg": "Неверный пароль"
+	"incorrect_password_msg": "Неверный пароль",
+	"username_warning": "Имя пользователя должно содержать только буквы и цифры и иметь как минимум два символа",
+	"email_warning": "Некорректный email",
+	"password_warning": "Пороль должен содержать минимум 8 символов, заглавную и строчную букву, цифру и спец. символ (@$!%*?&)"
 }

@@ -29,5 +29,8 @@
 	"login_header": "LogIn",
 	"registration_header": "Create account",
 	"incorrect_email_msg": "No user with that email",
-	"incorrect_password_msg": "Password incorrect"
+	"incorrect_password_msg": "Password incorrect",
+	"username_warning": "Username must contain only letters and numbers and be at lest two characters long",
+	"email_warning": "Invalid email address",
+	"password_warning": "Password must include minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character (@$!%*?&)"
 }
